@@ -86,7 +86,7 @@ const VideoComponent = (props: Props) => {
 		inView
 	} = props;
 
-	const [isLoading, setIsLoading] = useState(true);
+	const [isLoading, setIsLoading] = useState(false);
 
 	let videoUrl: boolean | string = false;
 	if (data) {
@@ -99,23 +99,6 @@ const VideoComponent = (props: Props) => {
 		<VideoComponentWrapper className="video-component-wrapper">
 			{videoUrl && (
 				<>
-					<AnimatePresence>
-						{isLoading && (
-							<LoadingWrapper
-								variants={wrapperVariants}
-								initial="hidden"
-								animate="visible"
-								exit="hidden"
-							>
-								<Loader
-									variants={childVariants}
-									initial="hidden"
-									animate="visible"
-									exit="hidden"
-								/>
-							</LoadingWrapper>
-						)}
-					</AnimatePresence>
 					<Video
 						autoPlay
 						muted
