@@ -2,11 +2,10 @@
   "name": "react-app-update",
   "private": true,
   "scripts": {
-    "buildJson": "node scripts/buildJson.js",
-    "dev": "yarn buildJson && next dev",
-    "build": "yarn buildJson && next build",
+    "dev": "next dev",
+    "build": "next build",
     "postbuild": "next-sitemap",
-    "start": "yarn buildJson && next start",
+    "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
