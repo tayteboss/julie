@@ -55,7 +55,7 @@ const Header = () => {
 					<HeaderBottom>
 						<LayoutGrid>
 							<ComingSoon>Restaurant coming soon...</ComingSoon>
-							<SocialLink href="https://www.tayte.co/" target="_blank">
+							<SocialLink href="https://www.instagram.com/julierestaurant/" target="_blank">
 								Instagram
 							</SocialLink>
 						</LayoutGrid>

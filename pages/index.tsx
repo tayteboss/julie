@@ -1,10 +1,5 @@
-import Head from 'next/head';
-import { renderMetaTags } from 'react-datocms';
 import styled from 'styled-components';
-import { getPage } from '../lib/datocms';
 import { NextSeo } from 'next-seo';
-import VideoComponent from '../components/common/MediaStack/VideoComponent';
-import { useInView } from 'react-intersection-observer';
 import ImageGallery from '../components/sections/ImageGallery';
 
 const PageWrapper = styled.div``;
@@ -14,21 +9,11 @@ type Props = {
 };
 
 const Page = (props: Props) => {
-	const data = {
-		url: '/images/placeholder-video.mp4'
-	};
-
-	const { ref, inView } = useInView({
-		triggerOnce: true,
-		threshold: 0.2,
-		rootMargin: '-5%'
-	});
-
 	return (
-		<PageWrapper ref={ref}>
+		<PageWrapper>
 			<NextSeo
 				title="Julie Restaurant"
-				description="*** TO BE UPDATED ***"
+				description="Seasonal, casual dining in a unique heritage setting"
 				openGraph={{
 					images: [
 						{
@@ -45,7 +30,6 @@ const Page = (props: Props) => {
 };
 
 export async function getStaticProps() {
-	// const data = await getPage('home');
 	const data = false;
 
 	return {
