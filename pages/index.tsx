@@ -5,6 +5,7 @@ import { getPage } from '../lib/datocms';
 import { NextSeo } from 'next-seo';
 import VideoComponent from '../components/common/MediaStack/VideoComponent';
 import { useInView } from 'react-intersection-observer';
+import ImageGallery from '../components/sections/ImageGallery';
 
 const PageWrapper = styled.div``;
 
@@ -26,19 +27,19 @@ const Page = (props: Props) => {
 	return (
 		<PageWrapper ref={ref}>
 			<NextSeo
-				title="Julie - Coming soon"
+				title="Julie Restaurant"
 				description="*** TO BE UPDATED ***"
-				// openGraph={{
-				// 	images: [
-				// 		{
-				// 			url: siteData?.seoImage?.url,
-				// 			width: 800,
-				// 			height: 600,
-				// 		},
-				// 	],
-				// }}
+				openGraph={{
+					images: [
+						{
+							url: '/images/julie-open-graph.jpg',
+							width: 1200,
+							height: 630,
+						},
+					],
+				}}
 			/>
-			<VideoComponent data={data} inView={inView} />
+			<ImageGallery />
 		</PageWrapper>
 	);
 };
