@@ -27,7 +27,12 @@ const HeaderInner = styled.div`
 	}
 `;
 
-const Title = styled.p``;
+const LogoWrapper = styled.div``;
+
+const Logo = styled.img`
+	width: 200px;
+	height: auto;
+`;
 
 const HeaderBottom = styled.div``;
 
@@ -40,6 +45,10 @@ const ComingSoon = styled.p`
 `;
 
 const SocialLink = styled.a`
+	&:hover {
+		color: red;
+	}
+
 	@media ${(props) => props.theme.mediaBreakpoints.tabletPortrait} {
 		grid-column: span 2;
 		text-align: right;
@@ -51,7 +60,9 @@ const Header = () => {
 		<HeaderWrapper className="header">
 			<LayoutWrapper>
 				<HeaderInner>
-					<Title>Julie</Title>
+					<LogoWrapper>
+						<Logo src="/icons/logo.svg" />
+					</LogoWrapper>
 					<HeaderBottom>
 						<LayoutGrid>
 							<ComingSoon>Restaurant coming soon...</ComingSoon>
