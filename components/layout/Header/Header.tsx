@@ -32,12 +32,20 @@ const LogoWrapper = styled.div``;
 const Logo = styled.img`
 	width: 200px;
 	height: auto;
+
+	@media ${(props) => props.theme.mediaBreakpoints.tabletPortrait} {
+		width: 100px;
+	}
 `;
 
 const HeaderBottom = styled.div``;
 
-const ComingSoon = styled.p`
+const ComingSoon = styled.a`
 	grid-column: span 6;
+
+	&:hover {
+		color: red;
+	}
 
 	@media ${(props) => props.theme.mediaBreakpoints.tabletPortrait} {
 		grid-column: span 4;
@@ -65,7 +73,9 @@ const Header = () => {
 					</LogoWrapper>
 					<HeaderBottom>
 						<LayoutGrid>
-							<ComingSoon>Restaurant coming soon...</ComingSoon>
+							<ComingSoon href="https://bookings.obeeapp.com/julie" target="_blank">
+								Make a reservation
+							</ComingSoon>
 							<SocialLink href="https://www.instagram.com/julierestaurant/" target="_blank">
 								Instagram
 							</SocialLink>
